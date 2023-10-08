@@ -1,8 +1,9 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {  Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { ROUTES } from './../../utils/routes';
 import logo from '../img/logo.jpg';
+import 'font-awesome/css/font-awesome.min.css';
 import { Button, Col, Container, Nav, NavDropdown, Navbar, Row, Form } from 'react-bootstrap';
 
 
@@ -48,12 +49,19 @@ function Header() {
                   placeholder="Search"
                   className=" mr-sm-2"
                   autoComplete='off'
-                  onChange={()=>{}}
-                  
+                  onChange={() => { }}
+
                 />
               </Col>
               <Col xs="auto">
                 <Button type="submit">Submit</Button>
+                <Link >
+                  <i className="fa fa-home ms-4"></i>
+                </Link>
+                <Link className='link'>
+                  <i className="fa fa-shopping-bag ms-4"></i>
+                  <span>25</span>
+                </Link>
               </Col>
             </Row>
           </Form>
