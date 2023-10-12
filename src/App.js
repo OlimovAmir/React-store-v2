@@ -5,8 +5,15 @@ import Footer from './components/footer/Footer';
 import { Col, Container, Row } from 'react-bootstrap';
 import Sidebar from './components/sidebar/Sidebar';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { getCategories } from './features/categories/categoriesSlice';
 
 function App() {
+  const dispatch = useDispatch();
+  useEffect(()=>{
+    dispatch(getCategories());
+  },[dispatch])
   return (
     <div className="App">
       <Header />
